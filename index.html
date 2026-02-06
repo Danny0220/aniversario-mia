@@ -65,15 +65,11 @@
             border-radius: 15px;
             margin-top: 20px;
         }
-
-        audio {
-            display: none;
-        }
     </style>
 </head>
 <body>
 
-<audio autoplay loop>
+<audio id="musica" loop>
     <source src="cancion.mp3" type="audio/mpeg">
 </audio>
 
@@ -87,6 +83,9 @@
 
 <script>
     function mostrarMensaje() {
+        const audio = document.getElementById("musica");
+        audio.play();
+
         document.getElementById("contenido").innerHTML = `
             <h1>💖 Feliz Aniversario, Amor 💖</h1>
             <p>
@@ -109,3 +108,4 @@
 
 </body>
 </html>
+
